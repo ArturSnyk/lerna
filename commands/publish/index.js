@@ -19,6 +19,7 @@ const npmConf = require("@lerna/npm-conf");
 const npmDistTag = require("@lerna/npm-dist-tag");
 const npmPublish = require("@lerna/npm-publish");
 const packDirectory = require("@lerna/pack-directory");
+const logPacked = require("@lerna/log-packed");
 const { createRunner } = require("@lerna/run-lifecycle");
 const batchPackages = require("@lerna/batch-packages");
 const runParallelBatches = require("@lerna/run-parallel-batches");
@@ -503,6 +504,9 @@ class PublishCommand extends Command {
         pkg =>
           packDirectory(pkg, this.conf).then(packed => {
             pkg.tarball = packed;
+
+            logPacked(packed);
+
             return pkg;
           }),
 
