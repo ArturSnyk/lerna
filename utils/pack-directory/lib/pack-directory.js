@@ -21,7 +21,18 @@ function packDirectory(pkg, opts) {
 
   let chain = Promise.resolve();
 
+  if (opts.get("ignore-prepublish") !== false) {
+    chain = chain.then(() => runLifecycle(pkg, "prepublish", opts));
+  }
+
   chain = chain.then(() => runLifecycle(pkg, "prepare", opts));
+
+  if (opts.get("command") === "publish") {
+    chain = chain.then(() => pkg.refresh());
+    chain = chain.then(() => runLifecycle(pkg, "prepublishOnly", opts));
+    chain = chain.then(() => pkg.refresh());
+  }
+
   chain = chain.then(() => runLifecycle(pkg, "prepack", opts));
   chain = chain.then(() => pkg.refresh());
   chain = chain.then(() => packlist({ path: dir }));
