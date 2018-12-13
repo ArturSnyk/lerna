@@ -8,7 +8,12 @@ const initFixture = require("@lerna-test/init-fixture")(path.resolve(__dirname, 
 const packDirectory = require("..");
 
 describe("pack-directory", () => {
-  it("needs tests", async () => {
+  beforeAll(() => {
+    // ensure consistency between macOS and linux
+    process.umask(0o022);
+  });
+
+  it("resolves tarball metadata objects on success", async () => {
     const cwd = await initFixture("lerna-bootstrap");
     const conf = npmConf({ prefix: cwd });
     const pkgs = await getPackages(cwd);
@@ -21,7 +26,7 @@ Array [
   Object {
     "bundled": Array [],
     "entryCount": 3,
-    "filename": "package-1/integration-package-1-1.0.0.tgz",
+    "filename": "integration-package-1-1.0.0.tgz",
     "files": Array [
       Object {
         "mode": 420,
@@ -50,7 +55,7 @@ Array [
   Object {
     "bundled": Array [],
     "entryCount": 1,
-    "filename": "package-4/package-4-1.0.0.tgz",
+    "filename": "package-4-1.0.0.tgz",
     "files": Array [
       Object {
         "mode": 420,

@@ -18,7 +18,6 @@ function packDirectory(pkg, opts) {
         pkg.name.substr(1).replace(/\//g, "-")
       : pkg.name;
   const outputFileName = `${name}-${pkg.version}.tgz`;
-  const outputFilePath = path.relative(pkg.rootPath, path.join(dir, outputFileName));
 
   let chain = Promise.resolve();
 
@@ -44,10 +43,10 @@ function packDirectory(pkg, opts) {
     )
   );
   chain = chain.then(stream => tempWrite(stream, outputFileName));
-  chain = chain.then(tmpFilePath =>
-    getPacked(pkg, tmpFilePath, outputFilePath).then(packed =>
+  chain = chain.then(tarFilePath =>
+    getPacked(pkg, tarFilePath).then(packed =>
       Promise.resolve()
-        .then(() => fs.move(tmpFilePath, outputFilePath, { overwrite: true }))
+        .then(() => fs.move(tarFilePath, path.join(dir, outputFileName), { overwrite: true }))
         .then(() => runLifecycle(pkg, "postpack", opts))
         .then(() => packed)
     )
