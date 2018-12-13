@@ -1,12 +1,13 @@
 "use strict";
 
 const fs = require("fs-extra");
+const path = require("path");
 const ssri = require("ssri");
 const tar = require("tar");
 
 module.exports = getPacked;
 
-function getPacked(pkg, tmpFilePath, outputFileName) {
+function getPacked(pkg, tarFilePath) {
   const bundledWanted = new Set(pkg.bundleDependencies || pkg.bundledDependencies || []);
   const bundled = new Set();
   const files = [];
@@ -15,8 +16,8 @@ function getPacked(pkg, tmpFilePath, outputFileName) {
   let totalEntrySize = 0;
 
   return tar
-    .t({
-      file: tmpFilePath,
+    .list({
+      file: tarFilePath,
       onentry(entry) {
         totalEntries += 1;
         totalEntrySize += entry.size;
@@ -41,24 +42,24 @@ function getPacked(pkg, tmpFilePath, outputFileName) {
     })
     .then(() =>
       Promise.all([
-        fs.stat(tmpFilePath),
-        ssri.fromStream(fs.createReadStream(tmpFilePath), {
+        fs.stat(tarFilePath),
+        ssri.fromStream(fs.createReadStream(tarFilePath), {
           algorithms: ["sha1", "sha512"],
         }),
       ])
     )
-    .then(([stat, { sha1, sha512 }]) => {
+    .then(([{ size }, { sha1, sha512 }]) => {
       const shasum = sha1[0].hexDigest();
 
       return {
         id: `${pkg.name}@${pkg.version}`,
         name: pkg.name,
         version: pkg.version,
-        size: stat.size,
+        size,
         unpackedSize: totalEntrySize,
         shasum,
         integrity: ssri.parse(sha512[0]),
-        filename: outputFileName,
+        filename: path.basename(tarFilePath),
         files,
         entryCount: totalEntries,
         bundled: Array.from(bundled),
