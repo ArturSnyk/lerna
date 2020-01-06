@@ -1,0 +1,159 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-HTTPSPROXYAGENT-469131:
+    - lerna > libnpm > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > libnpm > pacote > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > libnpm > libnpmaccess > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > libnpm > libnpmhook > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > libnpm > libnpmorg > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > libnpm > libnpmpublish > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > libnpm > libnpmsearch > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > libnpm > libnpmteam > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > libnpm > npm-profile > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > libnpm > pacote > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > libnpm > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > @lerna/npm-dist-tag > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > libnpm > pacote > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > libnpm > libnpmaccess > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > libnpm > libnpmhook > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > libnpm > libnpmorg > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > libnpm > libnpmpublish > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > libnpm > libnpmsearch > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > libnpm > libnpmteam > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > libnpm > npm-profile > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > libnpm > pacote > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/run > @lerna/npm-run-script > libnpm > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/run > @lerna/npm-run-script > libnpm > pacote > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/run > @lerna/npm-run-script > libnpm > libnpmaccess > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/run > @lerna/npm-run-script > libnpm > libnpmhook > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/run > @lerna/npm-run-script > libnpm > libnpmorg > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/run > @lerna/npm-run-script > libnpm > libnpmpublish > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/run > @lerna/npm-run-script > libnpm > libnpmsearch > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/run > @lerna/npm-run-script > libnpm > libnpmteam > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/run > @lerna/npm-run-script > libnpm > npm-profile > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/run > @lerna/npm-run-script > libnpm > pacote > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > @lerna/npm-publish > @lerna/log-packed > libnpm > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > @lerna/npm-publish > @lerna/log-packed > libnpm > pacote > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > @lerna/npm-publish > @lerna/log-packed > libnpm > libnpmaccess > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > @lerna/npm-publish > @lerna/log-packed > libnpm > libnpmhook > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > @lerna/npm-publish > @lerna/log-packed > libnpm > libnpmorg > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > @lerna/npm-publish > @lerna/log-packed > libnpm > libnpmpublish > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > @lerna/npm-publish > @lerna/log-packed > libnpm > libnpmsearch > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > @lerna/npm-publish > @lerna/log-packed > libnpm > libnpmteam > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > @lerna/npm-publish > @lerna/log-packed > libnpm > npm-profile > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > @lerna/npm-publish > @lerna/log-packed > libnpm > pacote > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/add > @lerna/bootstrap > @lerna/symlink-dependencies > @lerna/resolve-symlink > libnpm > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/add > @lerna/bootstrap > @lerna/symlink-dependencies > @lerna/resolve-symlink > libnpm > pacote > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/add > @lerna/bootstrap > @lerna/symlink-dependencies > @lerna/resolve-symlink > libnpm > libnpmaccess > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/add > @lerna/bootstrap > @lerna/symlink-dependencies > @lerna/resolve-symlink > libnpm > libnpmhook > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/add > @lerna/bootstrap > @lerna/symlink-dependencies > @lerna/resolve-symlink > libnpm > libnpmorg > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/add > @lerna/bootstrap > @lerna/symlink-dependencies > @lerna/resolve-symlink > libnpm > libnpmpublish > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/add > @lerna/bootstrap > @lerna/symlink-dependencies > @lerna/resolve-symlink > libnpm > libnpmsearch > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/add > @lerna/bootstrap > @lerna/symlink-dependencies > @lerna/resolve-symlink > libnpm > libnpmteam > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/add > @lerna/bootstrap > @lerna/symlink-dependencies > @lerna/resolve-symlink > libnpm > npm-profile > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/add > @lerna/bootstrap > @lerna/symlink-dependencies > @lerna/resolve-symlink > libnpm > pacote > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/add > @lerna/bootstrap > @lerna/symlink-dependencies > @lerna/symlink-binary > @lerna/create-symlink > libnpm > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/add > @lerna/bootstrap > @lerna/symlink-dependencies > @lerna/symlink-binary > @lerna/create-symlink > libnpm > pacote > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/add > @lerna/bootstrap > @lerna/symlink-dependencies > @lerna/symlink-binary > @lerna/create-symlink > libnpm > libnpmaccess > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/add > @lerna/bootstrap > @lerna/symlink-dependencies > @lerna/symlink-binary > @lerna/create-symlink > libnpm > libnpmhook > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/add > @lerna/bootstrap > @lerna/symlink-dependencies > @lerna/symlink-binary > @lerna/create-symlink > libnpm > libnpmorg > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/add > @lerna/bootstrap > @lerna/symlink-dependencies > @lerna/symlink-binary > @lerna/create-symlink > libnpm > libnpmpublish > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/add > @lerna/bootstrap > @lerna/symlink-dependencies > @lerna/symlink-binary > @lerna/create-symlink > libnpm > libnpmsearch > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/add > @lerna/bootstrap > @lerna/symlink-dependencies > @lerna/symlink-binary > @lerna/create-symlink > libnpm > libnpmteam > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/add > @lerna/bootstrap > @lerna/symlink-dependencies > @lerna/symlink-binary > @lerna/create-symlink > libnpm > npm-profile > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/add > @lerna/bootstrap > @lerna/symlink-dependencies > @lerna/symlink-binary > @lerna/create-symlink > libnpm > pacote > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2020-01-06T01:29:42.946Z'
+  SNYK-JS-LODASH-450202:
+    - lerna > @lerna/run > @lerna/command > lodash:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > @lerna/version > @lerna/command > lodash:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/version > @lerna/conventional-commits > conventional-changelog-core > lodash:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > @lerna/prompt > inquirer > lodash:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/version > @lerna/conventional-commits > conventional-changelog-core > conventional-changelog-writer > lodash:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/version > @lerna/conventional-commits > conventional-changelog-core > conventional-commits-parser > lodash:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/version > @lerna/conventional-commits > conventional-recommended-bump > conventional-commits-parser > lodash:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > @lerna/version > @lerna/conventional-commits > conventional-changelog-core > lodash:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > @lerna/version > @lerna/prompt > inquirer > lodash:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > @lerna/version > @lerna/conventional-commits > conventional-changelog-core > conventional-changelog-writer > lodash:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > @lerna/version > @lerna/conventional-commits > conventional-changelog-core > conventional-commits-parser > lodash:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > @lerna/version > @lerna/conventional-commits > conventional-recommended-bump > conventional-commits-parser > lodash:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/version > @lerna/conventional-commits > conventional-changelog-core > conventional-changelog-writer > handlebars > async > lodash:
+        patched: '2020-01-06T01:29:42.946Z'
+    - lerna > @lerna/publish > @lerna/version > @lerna/conventional-commits > conventional-changelog-core > conventional-changelog-writer > handlebars > async > lodash:
+        patched: '2020-01-06T01:29:42.946Z'
