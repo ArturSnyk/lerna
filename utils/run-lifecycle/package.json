@@ -31,6 +31,6 @@
   },
   "dependencies": {
     "@lerna/npm-conf": "file:../npm-conf",
-    "libnpm": "^2.0.1"
+    "libnpm": "^3.0.1"
   }
 }
